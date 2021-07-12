@@ -30,8 +30,8 @@ registry_name/user_name/image_name:tag
 	
 ## Rootless Containers
 
-	Containers that do not require root privileges to run. Code inside can run as root, creates an abstraction layer for possible attacks, isolation and any user can run. 
+Containers that do not require root privileges to run. Code inside can run as root, creates an abstraction layer for possible attacks, isolation and any user can run. 
 
-	For Network this poses a problem, because for the create of a virtual ethernet interface you need to be a root user. On rootles containers, Slirp manages the network.
+For Network this poses a problem, because for the create of a virtual ethernet interface you need to be a root user. On rootles containers, Slirp manages the network.
 
-	Additionally, FUSE-OverlayFS is used instead of the dafault Overlat2 in rootles containers to create a new storage driver, user-space oriented. This is used because in most linux distros it wont allow overlay files sistems in user namespaces. 
+Additionally, FUSE-OverlayFS is used instead of the dafault Overlat2 in rootles containers to create a new storage driver, user-space oriented. This is used because in most linux distros it wont allow overlay files sistems in user namespaces. 
